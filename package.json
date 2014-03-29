@@ -1,0 +1,11 @@
+{
+  "name": "yestoall-syntax",
+  "theme": "syntax",
+  "version": "0.1",
+  "description": "yestoall syntax colors",
+  "repository": "https://github.com/yestoall/yestoall-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}

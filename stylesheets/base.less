@@ -1,0 +1,184 @@
+@import "variables";
+
+.editor-colors {
+    background-color: @syntax-background-color;
+    color: @syntax-text-color;
+}
+
+.editor {
+    color: #BBB;
+
+    .invisible-character {
+        color: #444;
+    }
+
+    .indent-guide {
+        color: #3e3e3e;
+    }
+
+    .gutter {
+        background-color: @syntax-gutter-background-color;
+        color: @syntax-gutter-text-color;
+    }
+
+    .gutter .line-number {
+        opacity: 1;
+    }
+
+    .gutter .line-number.folded,
+    .gutter .line-number:after,
+    .fold-marker:after {
+        color: @magenta;
+    }
+
+    .cursor {
+        border-color: @white;
+        border-radius: 2px;
+    }
+
+    .selection .region {
+        margin: -5px 0;
+        border: 16px solid @syntax-selection-color;
+        background-color: @syntax-selection-color;
+    }
+
+    .line-number.cursor-line-no-selection {
+        background-color: @syntax-gutter-background-color-selected;
+    }
+
+    .punctuation {
+      color: @gray_dark;
+    }
+}
+
+.bracket-matcher {
+  background-color: #000;
+  color: #FFF;
+  opacity: 0.5;
+}
+
+.comment {
+  color: @gray;
+  font-style: italic;
+}
+
+.entity {
+  color: #111;
+  padding: 1px 4px;
+  background: @blue;
+  border-radius: 4px;
+
+  .punctuation {
+    color: @gray_dark;
+  }
+}
+
+.keyword {
+  color: @gray_dark;
+
+  &.other {
+    &.special-method {
+      color: @red;
+    }
+  }
+}
+
+.storage.type {
+  color: @green;
+}
+
+.constant {
+  color: @yellow;
+
+  &.numeric,
+  &.boolean,
+  &.symbol, &.symbol .punctuation {
+    color: @white;
+  }
+
+  &.symbol.hashkey {
+    color: @brown;
+
+    .punctuation {
+      color: @gray_dark;
+    }
+  }
+}
+
+.delimiter, .brace {
+  color: @red;
+}
+
+.delimiter.period {
+  color: @green;
+}
+
+.invalid.deprecated {
+  text-decoration: underline;
+  color: @red;
+}
+
+.invalid.illegal {
+  color: @red;
+}
+
+.method .name {
+  color: #111;
+  background: @yellow;
+  padding: 2px 4px;
+}
+
+.operator.assignment {
+  color: @gray_dark;
+}
+
+.parameter {
+  color: @green;
+}
+
+.property-name {
+  color: @green;
+}
+
+.property-value {
+  .unit {
+    color: @green;
+  }
+}
+
+.string {
+  color: @white;
+
+  .constant.character.escape {
+    color: @gray_dark;
+  }
+
+  .punctuation.string {
+    color: @gray_dark;
+  }
+
+    // .ruby {
+    //   color: @green;
+    // }
+
+  &.regexp {
+    color: @yellow;
+
+    .source.ruby.embedded,
+    .string.regexp.arbitrary-repitition {
+      color: @gray;
+    }
+  }
+}
+
+.variable {
+  color: @brown;
+
+  &.instance {
+    color: @brown;
+  }
+
+  &.constant {
+    color: @brown;
+  }
+}
